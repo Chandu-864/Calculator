@@ -83,44 +83,48 @@ body {
     background-color: hsl(0, 6%, 50%);
 }
 
-.operators i {
+.back-option i{
     font-size: 2.7rem;
+    color: wheat;
+
 }
 
 @media only screen and (max-width: 600px) {
+
+    body {
+        background: black;
+    }
    
     #calculator {
-        height: 100%;
+        height: 100vh;
         background: black; 
     }
     #keys {
-
         grid-template-columns: repeat(4, 1fr); /* Reduce columns for smaller screens */
+        gap: 10px;
     }
 
     #keys button {
-        width: 60px;       /* Increase width for better usability */
-        height: 60px;      /* Adjust height for consistent button size */
-        font-size: 1.8rem;   /* Adjust font size for better readability */
+        width: 75px;       /* Increase width for better usability */
+        height: 75px;      /* Adjust height for consistent button size */
+        font-size: 2.2rem;   /* Adjust font size for better readability */
         border-radius: 15px; /* Slightly rounded corners for buttons */
         padding: 0; /* Remove padding to keep buttons uniform */
-        margin-left: 7px;
     }
 
     #keys .equals {
         width: 100%;        /* Ensure the equals button takes full width */
-        height: 60px;       /* Set a specific height for equals button */
+        height: 70px;       /* Set a specific height for equals button */
         border-radius: 15px; /* Rounded corners for consistency */
-        margin-top: 3px; 
+        margin-top: 6px; 
     }
 
     #display {
         margin-top: 120px;
-        font-size: 2rem;  /* Reduce font size for display on small screens */
         padding: 10px 20px;       /* Adjust padding for better spacing */
         overflow-x: auto;    /* Allow scrolling if the display text is too long */
         text-align: left;  
         background: black; /* Right-align the display text for a calculator look */
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 }
