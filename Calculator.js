@@ -15,8 +15,17 @@ function appendToDisplay(input){
         }
         return;
     }
-    if ((display.value === "Error") || (display.value === "undefined") || (display.value === "Infinity")) {
-        display.value = '0';
+    if ((display.value === "Error") || (display.value === "undefined") || (display.value === "Infinity") || (display.value === "NaN")) {
+        if (["+", "-", "\u00D7", "\u00F7"].includes(input)) {
+            display.value = '0'
+        }
+        else if (input === '.') {
+            display.value = '0' + input; 
+        }
+        else {
+            display.value = input;
+        }
+        return;
     }
     
     const lastChar = display.value.slice(-1);
@@ -72,7 +81,7 @@ function calculate() {
 
 
 function clearOne() {
-    if ((display.value === "Error") || (display.value === "undefined") || (display.value === "Infinity")) {
+    if ((display.value === "Error") || (display.value === "undefined") || (display.value === "Infinity") || (display.value === "NaN")) {
         display.style.color = "white";
         display.value = '0';
     }
