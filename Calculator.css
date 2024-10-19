@@ -115,7 +115,7 @@ body {
     }
 
     #display {
-        margin-top: 140px;
+        margin-top: 120px;
         font-size: 2rem;  /* Reduce font size for display on small screens */
         padding: 10px 20px;       /* Adjust padding for better spacing */
         overflow-x: auto;    /* Allow scrolling if the display text is too long */
